@@ -68,3 +68,4 @@ public/assets/
 
 # Ignore database files
 db/*.sqlite3
+*.db
