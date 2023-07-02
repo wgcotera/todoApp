@@ -29,9 +29,7 @@
 	};
 
 	const removeTodo = (todo) => {
-		console.log("vista", todo);
 		deleteTodo(todo).then((response) => {
-			console.log("response", response);
 			todo = response;
 			updateTodos();
 		});

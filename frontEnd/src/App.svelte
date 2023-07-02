@@ -32,7 +32,6 @@
 			status: $status ?? "todo",
 		};
 		postTodo(todo).then((response) => {
-			console.log(response);
 			status.set(null);
 			updateTodos();
 			event.target.todo.value = "";
