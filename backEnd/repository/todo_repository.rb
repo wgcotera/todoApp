@@ -1,7 +1,7 @@
 class TodoRepository
 
     def create(request_data)
-        @todo = Todo.new(request_data[:todo])
+        @todo = Todo.new(request_data)
         raise TodoNotSaved unless @todo.save
         @todo
     end
