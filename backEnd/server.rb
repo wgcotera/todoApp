@@ -12,6 +12,8 @@ set :database, {adapter: 'sqlite3', database: 'todos.db'}
 
 todo_repository = TodoRepository.new
 
+#  Cross Origin Resource Sharing (CORS)
+
 configure do
     enable :cross_origin
 end
@@ -30,6 +32,8 @@ options "*" do
     response.headers["Access-Control-Allow-Origin"] = "*"
     200
 end
+
+#  End of CORS
 
 get '/' do
     @todos = Todo.all
